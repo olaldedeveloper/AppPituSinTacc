@@ -5,21 +5,24 @@ import {
   NewError,
 } from "../middlewares/errorsManagers.Middleware.js";
 import { hashear } from "../utils/crypt.js";
-export class UsersService {
+class UsersService {
   constructor() {}
   async register(newUser) {
     const user = await userDaoMongoose.create(newUser);
     return user;
   }
   async find_User(query) {
-    const user = await userDaoMongoose.find_User(query);
+    const user = await userDaoMongoose.readOne(query);
     if (!user) {
       throw new NewError(ErrorType.UNAUTHORIZED_USER, "USER NOT FOUND");
+    }
+    else{
+      
     }
     return user;
   }
   async findUserById(query) {
-    const user = await userDaoMongoose.findUserId(query);
+    const user = await userDaoMongoose.find_User_Id(query);
     if (!user) {
       throw new NewError(ErrorType.UNAUTHORIZED_USER, "USER NOT FOUND");
     }

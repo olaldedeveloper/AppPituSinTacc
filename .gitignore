@@ -13,6 +13,6 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
-# Carpeta de build (por si algún día usás un empaquetador)
+# Carpeta de build 
 dist/
 build/
