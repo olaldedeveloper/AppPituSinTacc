@@ -4,6 +4,7 @@ import { URL_MONGO_ATLAS } from "../src/config/config.js";
 import { mainRouter } from "../src/routers/main.Router.js";
 import cookieParser from "cookie-parser";
 import express from "express";
+import { manejadorDeErrores } from "../src/middlewares/errorsManagers.Middleware.js";
 
 export class Server{
     #app;
@@ -20,6 +21,7 @@ export class Server{
     this.#app.use(cookieParser());
     setupHTTPLogger(this.#app);
     this.#app.use("/pituSinTacc", mainRouter)
+    this.#app.use(manejadorDeErrores)
     return new Promise((resolve, reject) => {
        this.#app.listen(port, () => {
         logger.INFO(`Server Listening Success | PORT: ${port}  `);
