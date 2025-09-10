@@ -12,8 +12,7 @@ const UsersManager = new Schema(
     email: { type: String, required: true, unique: true },
     first_name: { type: String, required: true },
     last_name: { type: String },
-    age: { type: Number },
-    password: { type: String, default: "(NO ES NECESARIO)" },
+    password: { type: String, required: true },
     carts: [{ type: mongoose.Schema.Types.ObjectId, ref: "carts" }] ,
     last_connection: { type: Date },
     role: { type: String, enum: ["admin", "user", "premium"], default: "user" },
@@ -31,6 +30,7 @@ export const usersModel = mongoose.model("users", UsersManager);
 class UsersDaoMonoose {
   async create(data) {
     data.password = await hashear(data.password);
+    data.active = false;
     const newUser = await usersModel.create(data);
     return await this.devolverSinPassword(newUser);
   }
@@ -79,6 +79,17 @@ class UsersDaoMonoose {
       .findOneAndUpdate(
         { email: emailUser },
         { $set: { last_connection: currentDate } },
+        { new: true }
+      )
+      .lean();
+    return update;
+  }
+    async changeActive(emailUser) {
+    const currentDate = new Date();
+    const update = await usersModel
+      .findOneAndUpdate(
+        { email: emailUser },
+        { $set: { active: true } },
         { new: true }
       )
       .lean();
@@ -152,4 +163,4 @@ class UsersDaoMonoose {
   }
 }
 
-export const userDaoMongoose = new UsersDaoMonoose();
+export const userModel = new UsersDaoMonoose();

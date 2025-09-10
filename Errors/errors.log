@@ -1,0 +1,25 @@
+{"level":"ERROR","message":"Error en bcrypt Error: data and hash arguments required"}
+{"level":"ERROR","message":"Error en bcrypt Error: data and hash arguments required"}
+{"level":"ERROR","message":"Error en bcrypt Error: data and hash arguments required"}
+{"level":"ERROR","message":"Error en bcrypt Error: data and hash arguments required"}
+{"level":"ERROR","message":"GET   400 - productService.mostrarVariosProductos is not a function /\n  | Date: 04:32:53 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   400 - products validation failed: code: Path `code` is required. /\n  | Date: 04:34:58 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   400 - res.created is not a function /\n  | Date: 04:36:40 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   400 - E11000 duplicate key error collection: PituSinTacc.products index: code_1 dup key: { code: null } /\n  | Date: 04:37:11 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   400 - E11000 duplicate key error collection: PituSinTacc.products index: code_1 dup key: { code: null } /\n  | Date: 04:38:13 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   400 - E11000 duplicate key error collection: PituSinTacc.products index: code_1 dup key: { code: null } /\n  | Date: 04:43:40 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   400 - E11000 duplicate key error collection: PituSinTacc.products index: code_1 dup key: { code: null } /\n  | Date: 04:45:24 - 10/9/2025 "}
+{"level":"ERROR","message":"GET   400 - productService.buscarPorID is not a function /\n  | Date: 04:48:57 - 10/9/2025 "}
+{"level":"ERROR","message":"GET   400 - res.result is not a function /\n  | Date: 04:50:11 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   400 - Cannot set properties of undefined (setting 'owner') /\n  | Date: 05:34:58 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   400 - Cannot set properties of undefined (setting 'owner') /\n  | Date: 05:36:23 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   400 - Cannot set properties of undefined (setting 'owner') /\n  | Date: 05:36:48 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   400 - Cannot set properties of undefined (setting 'owner') /\n  | Date: 05:37:13 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   400 - Cannot set properties of undefined (setting 'owner') /\n  | Date: 05:39:05 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   400 - Field `name` is not in schema and strict mode is set to throw. /\n  | Date: 05:46:13 - 10/9/2025 "}
+{"level":"ERROR","message":"GET   404 - ID PRODUCT NOT FOUND /\n  | Date: 05:59:28 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   ENOENT - ENOENT: no such file or directory, open 'C:\\Users\\jpola\\Proyectos\\AppPituSinTacc\\uploads\\Captura de pantalla 2025-09-05 151806-1757538008560.png' /\n  | Date: 06:00:10 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   ENOENT - ENOENT: no such file or directory, open 'C:\\Users\\jpola\\Proyectos\\AppPituSinTacc\\uploads\\Captura de pantalla 2025-09-05 151806-1757538079477.png' /\n  | Date: 06:01:52 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   ENOENT - ENOENT: no such file or directory, open 'C:\\Users\\jpola\\Proyectos\\AppPituSinTacc\\uploads\\Captura de pantalla 2025-09-05 151806-1757538185882.png' /\n  | Date: 06:03:46 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   ENOENT - ENOENT: no such file or directory, open 'C:\\Users\\jpola\\Proyectos\\AppPituSinTacc\\uploads\\Captura de pantalla 2025-09-05 151806-1757538492743.png' /\n  | Date: 06:08:12 - 10/9/2025 "}
+{"level":"ERROR","message":"POST   ENOENT - ENOENT: no such file or directory, open 'C:\\Users\\jpola\\Proyectos\\AppPituSinTacc\\uploads\\Captura de pantalla 2025-09-05 151806-1757538514543.png' /\n  | Date: 06:08:34 - 10/9/2025 "}

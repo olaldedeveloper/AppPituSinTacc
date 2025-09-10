@@ -23,7 +23,7 @@ export async function decrypt_User_Middleware(req, res, next) {
   }
 }
 
-export async function check_Cookie_Middleware(req, res, next) {
+export async function send_Cookie_Middleware(req, res, next) {
   try {
     req.token = req.token.split(" ")[1]; //quito Bearer
     res.cookie('token', req.token, COOKIE_OPTS);

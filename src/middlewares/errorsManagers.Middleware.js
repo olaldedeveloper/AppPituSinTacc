@@ -22,5 +22,5 @@ export async function manejadorDeErrores(error, req, res, next) {
     `${req.method}   ${error.code} - ${error.message} /
   | Date: ${new Date().toLocaleTimeString()} - ${new Date().toLocaleDateString()} `
   );
-  res.status(error.code).json({ status: "ERROR", message: error.message });
+  res.status(400).json({ status: "ERROR", message: error.message });
 }
