@@ -5,7 +5,7 @@ import {
   getProductsById,
   addNewProduct,
   updateProduct,
-  deleteProductMongoose,
+  deleteProduct,
   getProductsPaginate,updateIMG,
   checkIsAllowed,
   } from "../middlewares/product.Middlewares.js"
@@ -16,17 +16,13 @@ import { decrypt_User_Middleware } from "../middlewares/cookies.Middleware.js";
 
 export const productsRouter = new Router();
 productsRouter.post("/createNewProduct",decrypt_User_Middleware,upload.single('file'),updateIMG, addNewProduct);
-productsRouter.get("/:pid", getProductsById);
 
-productsRouter.put("/:pid", decrypt_User_Middleware,checkIsAllowed,updateProduct);
+productsRouter.put("/:pid", decrypt_User_Middleware,getProductsById,checkIsAllowed,upload.single('file'),updateIMG,updateProduct);
 productsRouter.get("/", getProductsController);
-//productsRouter.post("/addImg", uploadProducts.single("imagenProductos"));
-
-/*
 productsRouter.get("/productsPaginate", getProductsPaginate);
+productsRouter.get("/:pid", getProductsById,(req,res)=>{res.json(req.product)});
+
 productsRouter.delete(
-  "/:pId",
-  decrypt_User_Middleware
-   
+  "/:pid",
+  decrypt_User_Middleware,deleteProduct
 );
-*/

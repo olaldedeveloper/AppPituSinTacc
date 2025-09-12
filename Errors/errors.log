@@ -23,3 +23,28 @@
 {"level":"ERROR","message":"POST   ENOENT - ENOENT: no such file or directory, open 'C:\\Users\\jpola\\Proyectos\\AppPituSinTacc\\uploads\\Captura de pantalla 2025-09-05 151806-1757538185882.png' /\n  | Date: 06:03:46 - 10/9/2025 "}
 {"level":"ERROR","message":"POST   ENOENT - ENOENT: no such file or directory, open 'C:\\Users\\jpola\\Proyectos\\AppPituSinTacc\\uploads\\Captura de pantalla 2025-09-05 151806-1757538492743.png' /\n  | Date: 06:08:12 - 10/9/2025 "}
 {"level":"ERROR","message":"POST   ENOENT - ENOENT: no such file or directory, open 'C:\\Users\\jpola\\Proyectos\\AppPituSinTacc\\uploads\\Captura de pantalla 2025-09-05 151806-1757538514543.png' /\n  | Date: 06:08:34 - 10/9/2025 "}
+{"level":"ERROR","message":"PUT   400 - Cannot read properties of undefined (reading 'owner') /\n  | Date: 03:10:16 - 11/9/2025 "}
+{"level":"ERROR","message":"PUT   404 - NOT ADMIN OR OWNER /\n  | Date: 03:11:48 - 11/9/2025 "}
+{"level":"ERROR","message":"PUT   404 - NOT ADMIN OR OWNER /\n  | Date: 03:18:39 - 11/9/2025 "}
+{"level":"ERROR","message":"PUT   404 - NOT ADMIN OR OWNER /\n  | Date: 03:19:10 - 11/9/2025 "}
+{"level":"ERROR","message":"PUT   404 - NOT ADMIN OR OWNER /\n  | Date: 03:19:49 - 11/9/2025 "}
+{"level":"ERROR","message":"PUT   400 - Invalid atomic update value for $set. Expected an object, received undefined /\n  | Date: 03:24:34 - 11/9/2025 "}
+{"level":"ERROR","message":"PUT   400 - Invalid atomic update value for $set. Expected an object, received undefined /\n  | Date: 03:25:37 - 11/9/2025 "}
+{"level":"ERROR","message":"PUT   400 - res.result is not a function /\n  | Date: 03:25:53 - 11/9/2025 "}
+{"level":"ERROR","message":"PUT   400 - Invalid atomic update value for $set. Expected an object, received undefined /\n  | Date: 03:35:46 - 11/9/2025 "}
+{"level":"ERROR","message":"PUT   400 - Invalid atomic update value for $set. Expected an object, received undefined /\n  | Date: 03:36:19 - 11/9/2025 "}
+{"level":"ERROR","message":"PUT   400 - Invalid atomic update value for $set. Expected an object, received undefined /\n  | Date: 03:36:50 - 11/9/2025 "}
+{"level":"ERROR","message":"PUT   400 - Invalid atomic update value for $set. Expected an object, received undefined /\n  | Date: 03:37:45 - 11/9/2025 "}
+{"level":"ERROR","message":"GET   404 - ID PRODUCT NOT FOUND /\n  | Date: 03:59:24 - 11/9/2025 "}
+{"level":"ERROR","message":"GET   404 - ID PRODUCT NOT FOUND /\n  | Date: 03:59:41 - 11/9/2025 "}
+{"level":"ERROR","message":"GET   404 - ID PRODUCT NOT FOUND /\n  | Date: 04:00:45 - 11/9/2025 "}
+{"level":"ERROR","message":"GET   404 - ID PRODUCT NOT FOUND /\n  | Date: 04:01:51 - 11/9/2025 "}
+{"level":"ERROR","message":"GET   404 - ID PRODUCT NOT FOUND /\n  | Date: 04:02:26 - 11/9/2025 "}
+{"level":"ERROR","message":"GET   404 - ID PRODUCT NOT FOUND /\n  | Date: 04:05:34 - 11/9/2025 "}
+{"level":"ERROR","message":"GET   400 - res is not defined /\n  | Date: 04:07:57 - 11/9/2025 "}
+{"level":"ERROR","message":"GET   400 - res is not defined /\n  | Date: 04:15:40 - 11/9/2025 "}
+{"level":"ERROR","message":"GET   400 - res is not defined /\n  | Date: 04:15:52 - 11/9/2025 "}
+{"level":"ERROR","message":"GET   400 - res is not defined /\n  | Date: 04:16:22 - 11/9/2025 "}
+{"level":"ERROR","message":"GET   400 - res is not defined /\n  | Date: 04:19:38 - 11/9/2025 "}
+{"level":"ERROR","message":"DELETE   404 - ID PRODUCT NOT FOUND /\n  | Date: 04:25:21 - 11/9/2025 "}
+{"level":"ERROR","message":"GET   404 - ID PRODUCT NOT FOUND /\n  | Date: 04:26:38 - 11/9/2025 "}

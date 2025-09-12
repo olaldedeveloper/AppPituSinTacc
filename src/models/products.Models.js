@@ -48,6 +48,10 @@ class ProductsDaoMonoose {
     const array = await productsManagerMongoose.find().lean();
     return array;
   }
+  async paginateProducts(query, options) {
+    const productos = await productsManagerMongoose.paginate(query, options);
+    return productos;
+  }
   async updateOne(query, data) {
     const productUpdate = await productsManagerMongoose
       .findByIdAndUpdate(

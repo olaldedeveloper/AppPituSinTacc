@@ -35,11 +35,12 @@ class ProductService {
       }
       if (req.query.query) {
       }
-      const productos = await productsModel.paginate(
-        //se agrega la paginacion con un criterio de busqueda  y opciones de paginacion
+      const productos = await productsModel.paginateProducts(
         criterioBusqueda,
         opcionesDePaginacion
       );
+      return productos;
+      /*
 
       return {
         status: "success",
@@ -53,7 +54,7 @@ class ProductService {
         hayDocs: productos.docs > 0, //si docs es mayor a 0 los envia
         prevLink: productos.prevLink,
         user: req.user, //envia el usser conectado con fist_name , last_name , y isAdmin
-      };
+      };*/
     } catch (error) {
       return res.status(400).json({
         status: "error",
@@ -84,7 +85,7 @@ class ProductService {
     if (user.role === "admin" || product.owner === user.email ) {
       return true;
     }else{
-       throw new NewError(ErrorType.NOT_FOUND, "NOT ADMIN OR OWNER");
+       throw new NewError(ErrorType.NOT_FOUND, "NOT ADMIN OR OWNER ALLOWED TO CHANGE THIS PRODUCT");
     }
 }
 }

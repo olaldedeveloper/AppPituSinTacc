@@ -18,8 +18,8 @@ export async function getProductsController(req, res, next) {
 }
 export async function getProductsPaginate(req, res, next) {
   try {
-    const productPaginate = await productService.mostrarProductosPaginados(req);
-    res.result(productPaginate);
+    const productPaginate = await productService.showManyPaginateProducts(req);
+    res.json(productPaginate);
   } catch (error) {
     next(error);
   }
@@ -45,8 +45,8 @@ export async function updateIMG(req, res, next) {
 // Devuelve el producto con el ID especifico, en caso de no existir deuelve False
 export async function getProductsById(req, res, next) {
   try {
-    const product = await productService.findProductByID(req.params.pid);
-    return res.json(product);
+    req["product"] = await productService.findProductByID(req.params.pid);
+    next();
   } catch (error) {
     next(error);
   }
@@ -87,32 +87,26 @@ export async function updateProduct(req, res, next) {
       _id,
       req.body
     );
-    return res.result(productUpdate);
+    return res.json(productUpdate);
   } catch (error) {
     next(error);
   }
 }
 export async function checkIsAllowed(req, res, next) {
   try {
-    const product = await productService.isAllowed(req.params.pId, req.user);
-    if (!product) {
-      throw new NewError(
-        ErrorType.FORBIDDEN_USER,
-        "YOU ARE NOT ALLOWED TO DELETE THIS PRODUCT"
-      );
-    }
+    const isAllowed = await productService.isAllowed(req.product, req.user);
     next();
 } catch (error) {
     next(error);
   }
 }
 
-export async function deleteProductMongoose(req, res, next) {
+export async function deleteProduct(req, res, next) {
   try {
-    const productoEliminado = await productService.borrarProductoPorID(
-      req.params.pId
+    const productoEliminado = await productService.deleteProductByID(
+      req.params.pid
     );
-    return res.result(productoEliminado);
+    return res.json(productoEliminado);
   } catch (error) {
     next(error);
   }
