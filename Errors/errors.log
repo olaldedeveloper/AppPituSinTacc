@@ -48,3 +48,15 @@
 {"level":"ERROR","message":"GET   400 - res is not defined /\n  | Date: 04:19:38 - 11/9/2025 "}
 {"level":"ERROR","message":"DELETE   404 - ID PRODUCT NOT FOUND /\n  | Date: 04:25:21 - 11/9/2025 "}
 {"level":"ERROR","message":"GET   404 - ID PRODUCT NOT FOUND /\n  | Date: 04:26:38 - 11/9/2025 "}
+{"level":"ERROR","message":"GET   400 - Cast to ObjectId failed for value \"{ _id: undefined }\" (type Object) at path \"carts\" for model \"users\" /\n  | Date: 02:59:25 - 12/9/2025 "}
+{"level":"ERROR","message":"GET   400 - Cast to ObjectId failed for value \"{ _id: undefined }\" (type Object) at path \"carts\" for model \"users\" /\n  | Date: 02:59:40 - 12/9/2025 "}
+{"level":"ERROR","message":"POST   400 - Cast to [ObjectId] failed for value \"[ { _id: 'a3dfab83-1c03-48a6-9d5a-a46c041d1458' } ]\" (type string) at path \"carts.0\" because of \"CastError\" /\n  | Date: 03:00:10 - 12/9/2025 "}
+{"level":"ERROR","message":"POST   400 - Cast to [ObjectId] failed for value \"[ { _id: 'cb8b7269-fb7c-488a-acd0-0242d02bdb8c' } ]\" (type string) at path \"carts.0\" because of \"CastError\" /\n  | Date: 03:00:59 - 12/9/2025 "}
+{"level":"ERROR","message":"POST   400 - Cast to [ObjectId] failed for value \"[ { _id: 'd96504d1-4fef-4527-9d29-8d59798b30e6' } ]\" (type string) at path \"carts.0\" because of \"CastError\" /\n  | Date: 03:03:53 - 12/9/2025 "}
+{"level":"ERROR","message":"POST   400 - cartsManagerMongoose.create(...).lean is not a function /\n  | Date: 03:10:10 - 12/9/2025 "}
+{"level":"ERROR","message":"POST   400 - Cast to ObjectId failed for value \"fcc8e194-f468-45d8-9266-20215d5413b7\" (type string) at path \"carts\" because of \"BSONError\" /\n  | Date: 03:11:28 - 12/9/2025 "}
+{"level":"ERROR","message":"GET   ERR_HTTP_HEADERS_SENT - Cannot set headers after they are sent to the client /\n  | Date: 05:16:11 - 12/9/2025 "}
+{"level":"ERROR","message":"GET   ERR_HTTP_HEADERS_SENT - Cannot set headers after they are sent to the client /\n  | Date: 05:16:45 - 12/9/2025 "}
+{"level":"ERROR","message":"GET   ERR_HTTP_HEADERS_SENT - Cannot set headers after they are sent to the client /\n  | Date: 05:17:39 - 12/9/2025 "}
+{"level":"ERROR","message":"GET   ERR_HTTP_HEADERS_SENT - Cannot set headers after they are sent to the client /\n  | Date: 05:18:27 - 12/9/2025 "}
+{"level":"ERROR","message":"GET   ERR_HTTP_HEADERS_SENT - Cannot set headers after they are sent to the client /\n  | Date: 05:24:54 - 12/9/2025 "}

@@ -10,10 +10,8 @@ const UsersManager = new Schema(
   {
     _id: { type: String, default: randomUUID },
     email: { type: String, required: true, unique: true },
-    first_name: { type: String, required: true },
-    last_name: { type: String },
     password: { type: String, required: true },
-    carts: [{ type: mongoose.Schema.Types.ObjectId, ref: "carts" }] ,
+    carts: [{ type: String, ref: "carts" }],
     last_connection: { type: Date },
     role: { type: String, enum: ["admin", "user", "premium"], default: "user" },
     active: { type: Boolean, default: true },
@@ -67,7 +65,7 @@ class UsersDaoMonoose {
     const array = await usersModel
       .findOneAndUpdate(
         { email: emailUser },
-        { $push: { carts: { _id: _idCart } } },
+        { $push: { carts: _idCart } },
         { new: true }
       )
       .lean();
@@ -151,9 +149,6 @@ class UsersDaoMonoose {
     const datosUsuario = {
       _id: query["_id"],
       email: query["email"],
-      first_name: query["first_name"],
-      last_name: query["last_name"],
-      age: query["age"],
       carts: query["carts"],
       role: query["role"],
       last_connection: query["last_connection"],

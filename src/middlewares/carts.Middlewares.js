@@ -14,7 +14,7 @@ export async function createNewCart(req, res, next) {
     const cartN = await cartsService.createNewCart({});
     await usersService.addCartToUser(req.user.email, cartN._id);
 
-    res.created(cartN);
+    res.json(cartN);
   } catch (error) {
     next(error);
   }

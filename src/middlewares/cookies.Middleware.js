@@ -27,12 +27,10 @@ export async function send_Cookie_Middleware(req, res, next) {
   try {
     req.token = req.token.split(" ")[1]; //quito Bearer
     res.cookie('token', req.token, COOKIE_OPTS);
-    res.status(200).json({ message: 'Login exitoso' });
+    next();
 
   } catch (error) {
-    return res
-      .status(400)
-      .json({ status: "error", message: "You Need to login " });
+   next(error)
   }}
 
   export async function read_Cookie_Middleware(req, res, next) {
@@ -54,8 +52,11 @@ export async function send_Cookie_Middleware(req, res, next) {
   
 export async function logout(req, res) {
   
-    res.clearCookie("token", COOKIE_OPTS);
-    res.send("logout OK");
-
+try{
+      res.clearCookie("token", COOKIE_OPTS);
+       next()
+}catch(error){
+  return res.status(400).json({ status: "error", message: error.message });
+}
 
 }

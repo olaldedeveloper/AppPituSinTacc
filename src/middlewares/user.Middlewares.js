@@ -13,17 +13,6 @@ export async function find_User_Middleware(req, res, next) {
   }
 }
 
-export async function current_Session(req, res) {
-  try {
-    if (req.user) {
-      return res.result(req.user);
-    }
-    throw new Error("UNAUTHORIZED USER");
-  } catch (error) {
-    return res.status(404).json({ status: "error", message: error.message });
-  }
-}
-
 export async function register(req, res, next) {
   try {
     req.user = await usersService.register(req.body);

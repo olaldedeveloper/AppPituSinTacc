@@ -8,6 +8,10 @@ import {
 const CartSchema = new Schema(
   {
     _id: { type: String, default: randomUUID },
+    date_Done : { type: Date, default: null },
+    date_Collection : { type: Date ,default: null},
+    date_Create : { type: Date, default: Date.now },
+    done : { type: Boolean, default: false },
     products: {
       type: [
         {
@@ -31,7 +35,7 @@ class CartsDaoMonoose {
   async create(data) {
     try {
       const newCart = await cartsManagerMongoose.create({});
-      return newCart;
+      return newCart.toObject();
     } catch (error) {
       throw new NewError(ErrorType.INVALID_DATA, error.message);
     }
@@ -50,7 +54,7 @@ class CartsDaoMonoose {
       { $set: cart },
       { new: true }
     );
-    return cartUpdate;
+    return cartUpdate.toObject()  ;
   }
   async updateMany(query, data) {}
 
@@ -69,7 +73,7 @@ class CartsDaoMonoose {
     }
     const updateCart = await cartsDaoMongoose.updateOne(_idC, cart);
 
-    return updateCart;
+    return updateCart.toObject()  ;
   }
   async deleteOne(cid, pid) {
     const cart = await cartsManagerMongoose
